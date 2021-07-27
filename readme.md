@@ -1,7 +1,7 @@
 # Pasta CSS 
 
 <center>
-    <img src = "https://image.shutterstock.com/image-vector/sample-stamp-grunge-texture-vector-260nw-1389188336.jpg" style = "width: 200%; height: 200%;">
+    <img src = "https://github.com/manushifva/pasta-css/blob/master/images/pasta.png?raw=true" style = "width: 200%; height: 200%;">
 </center>
 
 Pasta CSS is a simple CSS set for a website. Works well with Bootstrap, and Font Awesome.
