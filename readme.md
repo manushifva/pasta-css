@@ -1,8 +1,6 @@
 # Pasta CSS 
 
-<center> 
-![Pasta CSS Logo](https://image.shutterstock.com/image-vector/sample-stamp-grunge-texture-vector-260nw-1389188336.jpg)
-</center>
+![Pasta CSS Logo](https://image.shutterstock.com/image-vector/sample-stamp-grunge-texture-vector-260nw-1389188336.jpg
 
 Pasta CSS is a simple CSS set for a website. Works well with Bootstrap, and Font Awesome.
 
