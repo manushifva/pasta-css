@@ -1,0 +1,398 @@
+@font-face {
+    font-family: nunito;
+    src: url(fonts/Nunito-Regular.ttf);
+}
+
+/* Main settings */
+:root {
+    --primary: #ffb446ff;
+    --primary2: #ffdc64ff;
+    --light1: #f7f7f7;
+    --light2: #ededed;
+    --shadow: #616161;
+    --dark1: #2b2b2b;
+    --dark2: #1f1f1f;    
+}
+
+/* Tags */
+body {
+    font-family: nunito;
+
+    line-height: 1.5;
+    font-weight: 400;
+}
+
+h1,h2,h3,h4,h5,h6 {
+    font-weight: 500;
+    line-height: 1.2;
+
+    margin: 6px 0;
+}
+
+.h1,h1{
+    font-size: 2.5rem;
+}
+
+.h2,h2{
+    font-size: 2rem;
+}
+
+.h3,h3{
+    font-size: 1.75rem;
+}
+
+.h4,h4{
+    font-size:1.5rem
+}
+
+.h5,h5{
+    font-size:1.25rem
+}
+
+.h6,h6{
+    font-size:1rem
+}
+
+a, a:visited, a:hover, a:active {
+    text-decoration: none;
+    color: inherit;
+}
+
+input, textarea, select, option {
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+}
+
+/* Cursor and select */
+.no-select {
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+}
+
+/* Header stuff */
+.header {
+    padding: 18px;
+
+    background-color: var(--light2);   
+    color: black;
+
+    display: flex;
+
+    z-index: 50;
+}
+
+.header.transparent {
+    color: white;
+    background: rgba(0, 0, 0, 0);
+
+    position: absolute;
+
+    width: 100%;
+}
+
+.header-menu {
+    margin-left: auto;
+    order: 2;
+}
+
+.header-menu-content { 
+    display: inline-block;
+
+    padding: 0 12px;
+
+    font-size: 18px;
+
+    height: 30px;
+}
+
+/* Buttons */
+.button {
+    background-color: var(--primary);
+    color: black !important;
+
+    padding: 6px 18px;
+
+    border-radius: 6px;
+
+    transition: 0.5s;
+
+    width: fit-content;
+
+    display: inline-block;
+
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+}
+
+.button:not(.border,.red,.green):not([disabled]):hover {
+    background-color: var(--primary2);
+    color: black;
+
+    transition: 0.5s;
+}
+
+.button.big {
+    font-size: 150%;
+
+    display: block;
+
+    width: fit-content;
+
+    margin: 12px;
+}
+
+.button.long {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.button.border {
+    background: rgba(0, 0, 0, 0);
+    color: white !important;
+
+    border: 2px grey;
+}
+
+.red {
+    background: #ff2e1f;
+    color: white !important;
+}
+
+.red:hover {
+    background: #ff483b;
+    color: white !important;
+}
+
+.green {
+    background: #60f542 !important;
+    color: black !important;
+}
+
+.green:hover {
+    background: #69f74d;
+    color: white !important;
+}
+
+.button[disabled] {
+    cursor: not-allowed;
+}
+
+/* Form and popup */
+.form {
+    max-width: 400px;
+    width: 400px;
+
+    position: absolute;
+
+    background: var(--light2);
+
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    border-radius: 6px;
+
+    padding: 24px;
+
+    z-index: 2;
+}
+
+.popup {
+    position: absolute;
+
+    background: var(--light2);
+
+    top: -100%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    border-radius: 6px;
+
+    z-index: 1001;
+
+    transition: 0.5s;
+
+    max-width: 400px;
+    width: 400px;
+    max-height: calc(100% - 48px);
+
+    overflow-y: auto;
+}
+
+.popup > .header {
+    background: var(--primary);
+
+    margin: 0;
+
+    padding: 24px;
+}
+
+.popup > .content {
+    padding: 0 24px 24px 24px;
+}
+
+.popup.toggle {
+    top: 50%;
+
+    transition: 1s;
+}
+
+/* Label and input */
+.label {
+    float: left;
+
+    display: block;
+
+    margin: 3px 0;
+}
+
+.input {
+    border-radius: 6px;
+
+    display: flex;
+
+    width: 100%;
+
+    background: var(--light1);
+
+    box-sizing: border-box;
+
+    border: 0;
+}
+
+.input input, .input select, .input option, input.input, textarea.input {
+    padding: 6px 12px;
+    border: none;
+
+    border-radius: 6px;
+
+    background: var(--light1);
+
+    width: 100%;
+}
+
+.input select, .input option {
+    width: fit-content;
+}
+
+.input input:focus, .input select:focus, input.input, textarea:focus {
+    outline: none;
+}
+
+/* Input icon */
+.input .icon {
+    height: auto;
+
+    background: var(--light1);
+    color: var(--primary);
+
+    text-align: center;
+
+    width: fit-content;
+
+    padding: 0 12px;
+}
+
+.icon.transparent {
+    background: var(--ligth1);
+}
+
+.icon>* {
+    width: 16px;
+    font-size: 18px;
+
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+
+    box-sizing: border-box;
+}
+
+.input-box {
+    padding: 12px 0;
+}
+
+.input-box.fill {
+    border-radius: 6px;
+
+    background: var(--light1);
+}
+
+/* Loader bar */
+.loader-bar {
+    width: 100%;
+
+    background: var(--light2);
+
+    border-radius: 6px;
+
+    padding: 6px;
+
+    box-sizing: border-box;
+}
+
+.loader-child {
+    width: 0%;
+    height: 100%;
+
+    background: var(--primary);
+
+    border-radius: 6px;
+
+    font-size: 75%;
+
+    position: relative;
+
+    transition: 0.5s;
+}
+
+.loader-child > span {
+    padding: 2px 12px;
+}
+
+/* Table */
+.table { 
+    width: 100%;
+
+    margin: 12px 0;
+
+    border-radius: 6px;
+}
+
+.table, .table tr, .table td, .table th {
+    border-collapse: collapse;
+}
+
+.table th:first-child {
+    border-top-left-radius: 6px;
+}
+
+.table th:last-child {
+    border-top-right-radius: 6px;
+}
+
+.table tr:last-child>td:first-child {
+    border-bottom-left-radius: 10px;
+}
+
+.table tr:last-child>td:last-child {
+    border-bottom-right-radius: 10px;
+}
+
+.table tr:nth-child(odd) {
+    background: var(--light1);
+}
+
+.table td {
+    padding: 9px 12px; 
+}
+
+.table th {
+    padding: 12px;
+    background: var(--light2);
+}
